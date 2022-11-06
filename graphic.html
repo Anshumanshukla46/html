@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- id : for accessing in javascript
+        width, height: for space
+     -->
+    <canvas id="demo" width="200" height="100" style="border: 1px solid black;"></canvas>
+
+    <!-- image will be drawn with javascript -->
+    <!-- their will be different "javascript" tools for canvas to learn -->
+    <script>
+        var can = document.getElementById('demo');
+        var move = can.getContext("2d");
+        move.moveTo(0, 0);
+        move.lineTo(200, 100);
+        move.stroke();
+    </script>
+
+    <hr>
+    <br>
+
+    <!-- drawn the image -->
+
+    <img width="227px" height="200px" src="./images/img_the_scream.jpg" id="scream_img" />
+
+    <!-- html example -->
+    <span style="text-align:center; color:black;">&#x2192;</span>
+
+    <canvas id="imageCanvas" width="240px" height="300px" style="border:1px solid black; margin-left: 40px;"></canvas>
+
+    <br>
+    <button onclick="draw()">Draw Image</button>
+
+    <script>
+        function draw() {
+            var c = document.getElementById("imageCanvas");
+            var x = c.getContext("2d");
+
+            var img = document.getElementById("scream_img");
+            x.drawImage(img, 10, 10);
+        }
+    </script>
+
+
+
+    <!-- svg -->
+
+    preview is not available for svg in vs code
+    <!-- <svg width="400" height="180">
+        <rect width="200px" height="100" x="50" y="40" rx="30" ry="20"
+        
+        />
+    </svg> -->
+
+
+</body>
+
+</html>

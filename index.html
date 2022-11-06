@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        strong {
+            background-color: cadetblue;
+        }
+
+        /* background image */
+        body {
+            background-image: url(./images/background-image.jpg);
+            /* background-repeat: no-repeat; */
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- website icon -->
+    <!-- should be high contrast-->
+    <!-- image name should be favicon.ico -->
+    <link rel="icon" type="image/icon" href="./images/favicon.ico">
+
+</head>
+
+<body>
+    <h1> Heading1 </h1>
+    <h2> Heading2 </h2>
+
+    <strong>Hello</strong>
+
+    <p>Lorem <i>ipsum</i> dolor sit amet consectetur, adipisicing elit. Amet facere nobis natus repudiandae,
+        perspiciatis quaerat
+        <mark>quam!</mark>
+        Accusantium, harum. Totam, distinctio atque. Expedita maiores amet ab harum quam
+        <del>nam</del>
+        ipsa commodi?
+    </p>
+
+    <em>Hello</em> <br>
+
+    <ins>World</ins>
+    <hr>
+
+    <h4>New heading</h4>
+    <!-- blockquote: used for section from other source -->
+    <blockquote cite="anyurl.com">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eligendi possimus delectus sequi, laborum, eius
+        quidem numquam, blanditiis magni nobis pariatur quae libero rerum impedit facere necessitatibus molestiae ut.
+        Voluptatum!
+    </blockquote>
+
+    <p style="background-color: cyan; width:auto; height: 50px;">Lorem ipsum dolor sit <q>amet</q> consectetur
+        adipisicing elit. Magnam </p>
+
+    <p>blanditiis magni <abbr title="Abbreviation">nobis</abbr> pariatur quae libero rerum impedit facere necessitatibus
+        molestiae ut.</p>
+
+
+    <hr>
+    <!-- using the float over image -->
+
+    <pre>
+        <img alt="smiley" src="./images/smiley.gif" style="width: 42px; height: 42px; float: left;">
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur esse amet illum debitis eum perferendis atque
+        quod tempora, consectetur corrupti. Enim iure temporibus quae dolorum omnis harum soluta doloremque nobis!
+    </pre>
+
+    <br>
+
+    <p>
+        <img src="./images/smiley.gif" alt="image" style="width: 40px; height:40px; float: right;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint sapiente corporis quas deleniti rerum esse
+        accusantium nostrum non quasi eum, numquam fugiat magnam aut quisquam aliquam ea animi ullam illum?
+    </p>
+
+    <!-- picture image -->
+
+    <picture>
+        <!-- different screen size -->
+        <source media="(min-width:400px)" src="hello1.jpg">
+        <source media="(min-width:70px)" src="hello2.jpg">
+
+        <!-- if no size matches -->
+        <img src="default.img">
+    </picture>
+
+
+    <hr><br>
+
+
+
+
+
+    <table style="width: 100%;">
+        <tr>
+            <th style="width: 50%;">Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+
+        <tr>
+            <!-- can have multiple header in table along col/row -->
+            <td style="height: 70px;">Alfreds Futterkiste</td>
+            <th style="text-align: left;">Maria Anders</th>
+            <td>Germany</td>
+        </tr>
+
+        <tr>
+            <td>Centro comercial</td>
+            <td>Moctezuma Francisco</td>
+            <td>Chang Mexico</td>
+        </tr>
+
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel </td>
+            <td>Austria</td>
+        </tr>
+
+        <tr>
+            <td>Island Trading </td>
+            <td>Helen Bennett </td>
+            <td>UK</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

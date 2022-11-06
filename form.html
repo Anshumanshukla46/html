@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together. -->
+
+    <!-- text and label -->
+    <form>
+        <caption>Name</caption><br>
+        <label for="fname">First Name:</label> <br>
+        <!-- readonly attribute is one of read -->
+        <input type="text" id="fname" value="Anshuman" readonly /> <br> <br />
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" /></br>
+
+    </form>
+
+    <!-- radio and label -->
+    <form>
+        <!-- name of all radio for same kind is same -->
+        <!-- * radio-name : radio then label -->
+        <caption>Course</caption> <br>
+        <input type="radio" id="it" name="course" value="IT">
+        <label for="it">IT</label>
+        <br>
+        <input type="radio" id="cs" name="course" value="CS">
+        <label for="cs">CS</label>
+    </form>
+
+
+    <!-- good one -->
+    <!-- The <fieldset> element is used to group related data in a form.
+        The <legend> element defines a caption for the <fieldset> element.
+    -->
+    <form>
+        <fieldset>
+            <legend>Details</legend>
+            <label for="fname">First Name:</label> <br>
+            <input type="text" id="fname" /> <br> <br />
+
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" /></br>
+
+        </fieldset>
+    </form> <br><br>
+
+    <!-- good one -->
+    <!--
+        The <datalist> element specifies a list of pre-defined options for an <input> element.
+        Users will see a drop-down list of the pre-defined options as they input data.
+        The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+     -->
+
+    <form action="action.php">
+        <caption>Select the browser : </caption>
+        <input list="browser">
+        <datalist id="browser">
+            <!-- act as the wish list -->
+            <option value="internet-explorer"></option>
+            <option value="chrome">any-description</option>
+            <option value="edge">
+            <option value="safari"></option>
+        </datalist>
+    </form>
+
+    <br>
+
+    <!-- select color -->
+    <form>
+        <label for="color">Select a color</label>
+        <input type="color" id="color"> <br>
+        <input type="submit">
+        <input type="reset">
+    </form><br><br>
+
+
+    <!-- select date -->
+    <form>
+
+        <label for="date"><strong>Select a date</strong></label>
+        <!-- can specifies the min and max date -->
+        <input type="date" id="date" min="2016-08-16">
+    </form> <br><br>
+
+
+
+
+    <!-- select month and year -->
+    <form>
+
+        <label for="month"><strong>Select a month and year</strong></label>
+        <input type="month" id="month">
+    </form> <br><br>
+
+
+
+    <!-- image as submit -->
+
+    <strong>image as submit</strong>
+    <form>
+        <label for="fname">First Name: </label>
+        <input type="text" name="hello" id="fname">
+        <br><br>
+
+        <label for="lname">Last Name: </label>
+        <input type="text" name="world" id="lname">
+        <br><br>
+
+        <input type="image" src="./images/img_submit.gif" alt="submit">
+
+    </form>
+    <hr><br>
+
+    <!-- range -->
+
+    <form>
+        <label for="range">select a range</label>
+        <input type="range" name="rng" id="range" min="0" max="50">
+    </form><br><br>
+
+
+    <pre><strong>output tag to show something</strong>
+    used javascript tag</pre>
+    <form action="action.php" oninput="x.value=parseInt(a.value)+parseInt(a.value)">
+        <caption>The output element represents the result of a calculation.<caption>
+                <br>
+                0
+                <input type="range" min="0" max="50" id="a" value="50">
+                50 +
+
+                <input type="number" id="b" value="50">
+                =
+                <!-- for tag is important -->
+                <output name="x" for="a b">Ans</output>
+
+    </form>
+
+    <br>
+    <hr>
+
+    <!-- select time -->
+    <form>
+        <label for="time">Select time: </label>
+        <input type="time">
+    </form>
+
+
+    <br>
+    <hr>
+    <!-- select week -->
+    <form>
+        <label for="week">Select week: </label>
+        <input type="week">
+    </form> <br> <br>
+    <hr>
+
+    <!-- drop-down : select attribute -->
+
+    <form>
+        <!-- name attribute is needed to reference the form data after the form is submitted (if you omit the name attribute, no data from the drop-down list will be submitted).
+
+        The id attribute is needed to associate the drop-down list with a label. -->
+
+        <label for="cars">Select a car</label>
+
+        <select name="cars" id="cats">
+            <!-- value is for server -->
+            <option value="volvo">Volvo</option>
+            <option value="swift">Swift</option>
+
+            <!-- header of label -->
+            <optgroup label="German Cars">
+                <option value="Audi">Audi</option>
+                <option value="Mercedes">Mercedes</option>
+            </optgroup>
+
+        </select>
+    </form>
+
+    <br><br>
+    <hr>
+
+    <!-- textarea -->
+
+    <textarea name="sample" rows="5"
+        cols="60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus laudantium rerum in repellat maxime consectetur, similique dicta porro quaerat velit odio temporibus assumenda neque distinctio molestias. Excepturi fugiat nemo nostrum?</textarea>
+
+    <!-- attributes -->
+
+    <form>
+
+        <!-- "readonly" attribute is one of read -->
+        <input type="text" id="fname" value="Anshuman" readonly /> <br> <br />
+
+        <!-- disabled, required -->
+        <input type="button" value="random" disabled>
+
+        <!-- placeholder : short hint -->
+        <input type="text" name="demo" id="d1" placeholder="short hint">
+
+        <hr>
+        <strong>step attribute for interval : </strong>
+        <!-- step is interval -->
+        <input type="number" step="2">
+    </form>
+
+
+</body>
+
+</html>
